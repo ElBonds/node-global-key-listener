@@ -13,7 +13,7 @@
         "build": "tsc",
         "test": "node build/test.js",
         "compile-win": ".\\scripts\\compile-win.bat",
-        "compile-mac": "swiftc src/bin/MacKeyServer/main.swift -o bin/MacKeyServer",
+        "compile-mac": "mkdir -p .cache/swift-module-cache && swiftc -module-cache-path .cache/swift-module-cache src/bin/MacKeyServer/main.swift -o bin/MacKeyServer",
         "compile-x11": "scripts/compile-x11.sh",
         "prepare": "npm run build"
     },
